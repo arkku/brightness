@@ -1,0 +1,45 @@
+.Dd July 18, 2014
+.Dt brightness 1
+.Os kk
+.Sh NAME
+.Nm brightness
+.Nd Adjust display brightness
+.Sh SYNOPSIS
+.Nm
+.Op Fl d Ar name_of_display
+.Op Fl s
+.Op Ar brightness_to_set
+.Sh DESCRIPTION
+.Nm
+lists every connected display and its brightness (if available) when
+run without arguments. If a brightness value (floating point number)
+is given on the command-line,
+.Nm
+sets the brightness of every display (that has adjustable brightness)
+to that value. A single display may be specified with the
+.Fl d
+option.
+.Sh OPTIONS
+.Bl -tag -width -indent
+.It Fl d Ar name_of_display
+Only adjust the named display
+.It Fl s
+Silence non-error output
+.It Ar brightness_to_set
+Brightness value to set (decimal number, usually from 0.0 to 1.0)
+.El
+.Sh EXAMPLES
+Set brightess of display
+.Ar iMac
+to
+.Ar 0.5
+.Pp
+.Bd -ragged -offset indent
+.Nm
+.Fl d
+.Ar iMac
+.Ar 0.5
+.Ed
+.Pp
+.Sh AUTHOR
+.An "Kimmo Kulovesi" Aq http://arkku.com
