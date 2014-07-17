@@ -11,6 +11,10 @@ to calibrate colours, allowing me to make rough adjustments via keyboard
 commands (e.g., when playing games or watching movies) without worrying
 about being able to go back to the calibrated setting.
 
+There are other utilities for this, but most of them seem to use the
+`CGDisplayIOServicePort()` function, which is deprecated as of OS X 10.9,
+and/or they do not support display names.
+
 ~ [Kimmo Kulovesi](http://arkku.com/), 2014-07-18
 
 Usage
