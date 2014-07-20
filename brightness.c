@@ -24,6 +24,8 @@
 
 static const CFStringRef kDisplayBrightness = CFSTR(kIODisplayBrightnessKey);
 static const int NAME_WIDTH = 20;
+#define BR_FMT "%.3f"
+
 
 static void
 usage (int status) {
@@ -151,7 +153,7 @@ main (int argc, char *argv[]) {
             err = IODisplayGetFloatParameter(display, kNilOptions,
                                              kDisplayBrightness, &b);
             if (err == kIOReturnSuccess && outfile) {
-                (void) fprintf(outfile, "%1.3f", b);
+                (void) fprintf(outfile, BR_FMT, b);
             }
         }
 
@@ -162,7 +164,7 @@ main (int argc, char *argv[]) {
             if (err == kIOReturnSuccess) {
                 ++number_of_displays_set;
                 if (outfile) {
-                    (void) fprintf(outfile, " -> %1.3f", brightness);
+                    (void) fprintf(outfile, " -> " BR_FMT, brightness);
                 }
             } else {
                 (void) fprintf(stderr,
