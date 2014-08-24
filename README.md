@@ -2,8 +2,8 @@ brightness
 ==========
 
 A command-line utility to programmatically adjust the brightness of
-displays on Mac OS X. Brightness is typically adjustable in this way
-only on the built-in displays of Macs.
+displays on Mac OS X. Brightness is adjustable in this way
+only on certain displays, typically the built-in displays of Macs.
 
 Personally I find this useful when used together with display calibration -
 a simple script can restore the display to the brightness setting used
@@ -21,12 +21,12 @@ Usage
 =====
 
 The default behaviour of `brightness` is to list all displays and
-their brightness values. Specifying a brightness (typicall a number
+their brightness values. Specifying a brightness (typically a number
 from 0.0 to 1.0) on the command-line sets the brightness of all
 applicable displays to that number. The option `-d display` can be used
-to specify the name of an individual display to adjust.
+to name a specific display to adjust.
 
-Example:
+Example to set the display named `iMac` to brightness `0.5` (50%):
 
     brightness -d iMac 0.5
 
