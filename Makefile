@@ -1,7 +1,7 @@
 CC=clang
-ARCHFLAGS=-arch i386 -m32
+#ARCHFLAGS=-arch i386 -m32
 CFLAGS=-Wall -std=c99 -pedantic -Wextra $(ARCHFLAGS) \
-       -DMACOSX_DEPLOYMENT_TARGET=10.5 -Os 
+       -DMACOSX_DEPLOYMENT_TARGET=10.6 -Os 
 LDFLAGS=-Os $(ARCHFLAGS)
 FRAMEWORKS=-framework IOKit -framework ApplicationServices
 
